@@ -20,13 +20,9 @@ export const appWithTranslation = <Props extends NextJsAppProps>(
   const AppWithTranslation = (props: Props & { pageProps: Props['pageProps'] & SSRConfig }) => {
     const { _nextI18Next } = props.pageProps
     let locale: string | undefined =
-      _nextI18Next?.initialLocale ?? props?.router?.locale
+      props.router.query?.lng ?? _nextI18Next?.initialLocale
     const ns = _nextI18Next?.ns
 
-    // Memoize the instance and only re-initialize when either:
-    // 1. The route changes (non-shallowly)
-    // 2. Router locale changes
-    // 3. UserConfig override changes
     const i18n: I18NextClient | null = useMemo(() => {
       if (!_nextI18Next && !configOverride) return null
 
