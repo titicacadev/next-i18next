@@ -20,7 +20,7 @@ export const appWithTranslation = <Props extends NextJsAppProps>(
   const AppWithTranslation = (props: Props & { pageProps: Props['pageProps'] & SSRConfig }) => {
     const { _nextI18Next } = props.pageProps
     let locale: string | undefined =
-      props.router.query?.lng ?? _nextI18Next?.initialLocale
+      props.router.query?.lang ?? _nextI18Next?.initialLocale
     const ns = _nextI18Next?.ns
 
     const i18n: I18NextClient | null = useMemo(() => {
