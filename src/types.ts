@@ -9,7 +9,7 @@ import {
   Translation,
 } from 'react-i18next'
 import { InitOptions, i18n as I18NextClient, TFunction as I18NextTFunction } from 'i18next'
-import { appWithTranslation, i18n } from './'
+import { appWithTranslation, i18n, getTranslation } from './'
 
 type NextJsI18NConfig = {
   defaultLocale: string
@@ -60,6 +60,7 @@ export {
   I18nContext,
   appWithTranslation,
   useTranslation,
+  getTranslation,
   Trans,
   Translation,
   withTranslation,
