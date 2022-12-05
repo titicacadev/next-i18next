@@ -7,7 +7,7 @@ import { globalI18n } from './appWithTranslation'
  * TF인 경우 common-web, 그 외 local
  */
 // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
-export function getTranslation(ns: 'common-web' | 'local') {
+export function getTranslation<T extends 'common-web' | 'local'>(ns: T) {
   if (!globalI18n) {
     throw new Error('i18n 인스턴스가 초기화되지 않았습니다.')
   }
