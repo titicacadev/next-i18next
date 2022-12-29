@@ -9,6 +9,19 @@ import { globalI18n } from './appWithTranslation'
 import { UserConfig, SSRConfig } from './types'
 import { getFallbackForLng, unique } from './utils'
 
+const LOCALE_PATH = './public/static/locales'
+const DEFAULT_CONFIG = {
+  i18n: {
+    defaultLocale: 'ko',
+    locales: ['ko', 'ja', 'zh'],
+  },
+  localePath:
+    typeof window === 'undefined'
+      ? path.resolve(LOCALE_PATH)
+      : '/public/static/locales',
+  // eslint-disable-next-line sort-keys
+  defaultNS: 'local',
+}
 const DEFAULT_CONFIG_PATH = './next-i18next.config.js'
 
 export const serverSideTranslations = async (
@@ -28,7 +41,7 @@ export const serverSideTranslations = async (
   }
 
   if (userConfig === null) {
-    throw new Error('next-i18next was unable to find a user config')
+    userConfig = DEFAULT_CONFIG
   }
 
   const config = createConfig({
