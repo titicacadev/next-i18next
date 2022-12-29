@@ -1,3 +1,31 @@
+## 13.6.0
+
+- `serverSideTranslations`에 `DEFAULT_CONFIG` 옵션 객체 추가
+
+## 13.5.1
+
+- `appWithTranslation`의 Cannot read properties of undefined (reading 'query') 에러 대응
+
+## 13.5.0
+
+- `getTranslation` 함수가 type-safe 하도록 수정
+
+## 13.4.0
+
+- `getTranslation` 함수 추가
+
+## 13.3.0
+
+- `lng` 쿼리 스트링 대신 `lang` 쿼리 스트링을 이용하여 locale을 설정하도록 변경
+
+## 13.2.0
+
+- `appWithTranslation`에서 `lng` 쿼리 스트링으로 locale을 설정할 수 있도록 변경
+
+## 13.1.0
+
+- 패키지 이름을 `next-i18next`에서 `@titicaca/next-i18next`로 변경
+
 ## 13.0.0
 
 The v13.0.0 release is a major version to improve stability and general experience. 
