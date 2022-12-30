@@ -1,5 +1,9 @@
 ## 13.6.0
 
+- `getTranslation` 함수의 제네릭 타입에 `common-admin` 추가
+
+## 13.6.0
+
 - `serverSideTranslations`에 `DEFAULT_CONFIG` 옵션 객체 추가
 
 ## 13.5.1
