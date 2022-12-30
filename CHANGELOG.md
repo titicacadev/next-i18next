@@ -1,3 +1,7 @@
+## 13.7.1
+
+- [Fix DefaultNamespace import](https://github.com/i18next/next-i18next/pull/2061/files) PR 반영
+
 ## 13.6.0
 
 - `getTranslation` 함수의 제네릭 타입에 `common-admin` 추가
