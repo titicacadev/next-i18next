@@ -3,3 +3,5 @@ export { I18nContext, Trans, Translation, useTranslation, withTranslation } from
 export { appWithTranslation, globalI18n as i18n } from './appWithTranslation'
 
 export { getTranslation } from './getTranslation'
+
+import './isI18nConfigured'
