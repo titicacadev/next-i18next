@@ -83,14 +83,6 @@
       }
     ],
     "@typescript-eslint/no-var-requires": 0,
-    "prefer-arrow/prefer-arrow-functions": [
-      "error",
-      {
-        "disallowPrototype": true,
-        "singleReturnOnly": false,
-        "classPropertiesAllowed": false
-      }
-    ],
     "prefer-destructuring": ["error", {"object": true, "array": true}],
     "quotes": ["error", "single"],
     "quote-props": ["error", "as-needed"],
