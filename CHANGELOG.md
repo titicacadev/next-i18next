@@ -1,3 +1,7 @@
+## 13.8.0
+
+- i18n.d.ts 파일 존재 여부를 통해 국제화 설정이 되어있는지 판별
+
 ## 13.7.1
 
 - [Fix DefaultNamespace import](https://github.com/i18next/next-i18next/pull/2061/files) PR 반영
