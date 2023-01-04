@@ -1,6 +1,6 @@
 
 /* eslint-disable no-console */
-if (typeof window === 'undefined' && process.env.NODE_ENV === 'production') {
+if (typeof window === 'undefined') {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   import(`${process.cwd()}/i18n.d.ts`)
