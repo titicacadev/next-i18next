@@ -1,3 +1,7 @@
+## 13.8.2
+
+- 국제화 설정 판별 로직의 process.env === 'production' 조건문 제거
+
 ## 13.8.1
 
 - 국제화 설정 여부 판별 로직을 dynamic import 기반으로 변경
