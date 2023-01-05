@@ -1,6 +1,6 @@
 
 /* eslint-disable no-console */
-if (typeof window === 'undefined' && process.env.TAG_NAME?.includes('release-')) {
+if (typeof window === 'undefined' && process.env.GITHUB_ACTIONS) {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   import(`${process.cwd()}/i18n.d.ts`)
