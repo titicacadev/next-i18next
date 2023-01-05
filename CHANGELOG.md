@@ -1,3 +1,7 @@
+## 13.8.4
+
+- GITHUB_ACTIONS env 변수가 true일 때만 국제화 설정 여부 체크
+
 ## 13.8.2
 
 - 국제화 설정 판별 로직의 process.env === 'production' 조건문 제거
@@ -14,7 +18,7 @@
 
 - [Fix DefaultNamespace import](https://github.com/i18next/next-i18next/pull/2061/files) PR 반영
 
-## 13.6.0
+## 13.7.0
 
 - `getTranslation` 함수의 제네릭 타입에 `common-admin` 추가
 
