@@ -1,6 +1,6 @@
 {
   "name": "@titicaca/next-i18next",
-  "version": "13.8.5-beta.1",
+  "version": "13.8.5",
   "repository": "git@github.com:i18next/next-i18next.git",
   "author": "i18next",
   "funding": [
