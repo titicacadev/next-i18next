@@ -1,4 +1,4 @@
-import { globalI18n } from './appWithTranslation';
+import { globalI18n } from './appWithTranslation'
 
 /**
  * useTranslation 훅을 사용할 수 없는 일반 함수에서
@@ -11,8 +11,8 @@ export function getTranslation<
   T extends 'common-web' | 'common-admin' | 'local',
 >(ns: T) {
   if (!globalI18n) {
-    throw new Error('i18n 인스턴스가 초기화되지 않았습니다.');
+    throw new Error('i18n 인스턴스가 초기화되지 않았습니다.')
   }
 
-  return globalI18n.getFixedT<T, undefined>(null, ns);
+  return globalI18n.getFixedT<T, undefined>(null, ns)
 }
