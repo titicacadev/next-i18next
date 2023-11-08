@@ -5,6 +5,7 @@ import type { AppProps as NextJsAppProps } from 'next/app'
 
 import { createConfig } from './config/createConfig'
 import createClient from './createClient'
+import { abortIfI18nIsNotConfigured } from './check-i18n-configuration'
 
 import { SSRConfig, UserConfig } from './types'
 
@@ -17,6 +18,8 @@ export const appWithTranslation = <Props extends NextJsAppProps>(
   WrappedComponent: React.ComponentType<Props>,
   configOverride: UserConfig | null = null,
 ) => {
+  abortIfI18nIsNotConfigured()
+
   const AppWithTranslation = (props: Props & { pageProps: Props['pageProps'] & SSRConfig }) => {
     const { _nextI18Next } = props.pageProps
     let locale: string | undefined =
