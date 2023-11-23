@@ -1,3 +1,5 @@
+import i18n from 'i18next'
+
 import { globalI18n } from './appWithTranslation'
 
 /**
@@ -11,7 +13,9 @@ export function getTranslation<
   T extends 'common-web' | 'common-admin' | 'local',
 >(ns: T) {
   if (!globalI18n) {
-    throw new Error('i18n 인스턴스가 초기화되지 않았습니다.')
+    // eslint-disable-next-line no-console
+    console.warn('getTranslation error: i18n 인스턴스가 초기화되지 않았습니다.')
+    return i18n.getFixedT<T, undefined>(null, ns)
   }
 
   return globalI18n.getFixedT<T, undefined>(null, ns)
