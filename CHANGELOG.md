@@ -1,3 +1,9 @@
+## 13.8.7
+
+- `getTranslation()`을 사용할 때 국제화 설정이 누락된 경우 에러 대신 경고를 띄우도록 수정
+
+- TF에 적용된 국제화 시스템은 app directory가 아닌 pages directory 환경을 타겟으로 구현되어 있습니다. 이로 인해 app directory를 사용하는 프로젝트에서 TF를 사용할 때 TF코드에 적용된 `getTranslation()`에서 i18n 인스턴스가 초기화되지 않았다는 에러가 필연적으로 발생하게 되는데 (app directory에서는 `next-i18next` 라이브러리를 사용하지 않으므로), 이를 어쩔 수 없는 현상으로 간주하고 에러 대신 경고를 띄우도록 수정합니다. 이를 근본적으로 해결하기 위해선 추후 TF에 pages directory와 app directory 환경에서 모두 동작가능한 국제화 시스템을 도입해야 합니다.
+
 ## 13.8.6
 
 - 국제화 설정 여부 체크를 `appWithTranslation()` 안에서 수행하도록 함
